@@ -1,0 +1,627 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed');
+p{
+    color: #392613;
+    text-align: center;
+    font-family: 'Kalam',sans-serif;
+}
+@media(max-width: 1000px){
+    p{
+        font-size: 30px;
+    }
+}
+
+body{
+    background-image: url("https://previews.123rf.com/images/wutichaistudio/wutichaistudio1706/wutichaistudio170600494/80404087-fine-beach-sand-texture-background.jpg");
+    background-size: 200px 200px;
+    margin: 0;
+    max-width: 100vw;
+    overflow-y: hidden; 
+}
+html{
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+.top-menu{
+    z-index: 1;
+    background-color: rgb(190, 168, 124);
+    color: #1c1916;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    max-height: 200px;
+    width: 100vw;
+    margin: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+@media(max-width: 1100px){
+    .top-menu{
+        flex-direction: column;
+    }
+}
+
+.button-background{
+    width: 120%;
+    height:40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-out;
+}
+.close-button-background{
+    width: 120%;
+    height:40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-out;
+    background-color: red;
+    border-radius: 11px;
+}
+.button-background:hover{
+    transform: scale(1.6);
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.button-background:active{
+    transform: scale(1.5);
+    background-color: #EEEEEE;
+    border-radius: 11px;
+}
+.show-menu-button-background{
+    width: 300px;
+    height:40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-out;
+}
+
+.show-menu-button-background:hover{
+    transform: scale(1.3);
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.show-menu-button-background:active{
+    transform: scale(1.2);
+    background-color: #EEEEEE;
+    border-radius: 11px;
+}
+
+.menu-btn{
+    margin: 0 auto;
+    display: none;
+    text-decoration: none;
+}
+
+@media(max-width: 1100px){
+    .menu-btn{
+        display: flex;
+    }
+}
+
+
+.fa{
+    color: #1c1916;
+    width: 30px;
+    padding: 5px;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .2s ease-out;
+    transform: scale(2);
+}
+
+.fa:hover{
+    transform: scale(2.3);
+}
+.fa:active{
+    transform: scale(2.2);
+    color: #3f3020;
+}
+.social-buttons{
+    color: #1c1916;
+    position: fixed;
+    right: 20px;
+    top: 10px;
+}
+
+.nav-menu-nav{
+    display: flex;
+    margin-top: 20px;
+}
+.nav-menu-buttons{
+    display: flex;
+    margin-left: -20px;
+}
+
+
+
+
+.nav-menu-buttons li{
+    list-style: none;
+    padding-left: 20%;
+}
+.mobile-nav-menu-buttons li{
+    list-style: none;
+    padding-top: 20%;
+}
+@media(max-width: 1500px){
+.nav-menu-buttons li{
+    padding-left: 10%;
+}
+}
+@media(max-width: 1300px){
+.nav-menu-buttons li{
+    padding-left: 5%;
+}
+}
+@media(max-width: 1100px){
+    .nav-menu-buttons, .social-buttons{
+        display: none;
+    }
+}
+
+.nav-menu-buttons li a{
+    text-decoration: none;
+}
+.mobile-nav-menu-buttons li a{
+    text-decoration: none;
+    width: 100%;
+}
+#mobile-nav-menu{ 
+    position: fixed;
+    top:-100px;
+    height: 100vh;
+    width: 100%;
+    margin-top: 100px;
+    background-color: rgb(190, 168, 124);
+    display:none;
+    z-index: 1;
+}
+.mobile-nav-menu-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1.5);
+    margin-top: 0;
+}
+.mobile-menu-container{
+    width: 77%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+.button-text{
+    text-align: center;
+    font-family: 'Ubuntu',sans-serif;
+    color: #1c1916;
+}
+
+h1{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-left: 40px;
+    
+}
+
+
+
+h2{
+    margin: 50px;
+    color:#392613;
+    font-family: 'Kalam',sans-serif;
+    text-align: center;
+    font-size: 100px;
+}
+h3{
+    font-size: 35px;    
+    font-family: sans-serif;
+    color: #1c1916;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.welcome{
+    display: flex;
+    align-items: center;
+    margin-right:auto;
+    margin-left: auto;
+    margin-top: 200px;
+    border-radius: 30px;
+    
+}
+h4{
+
+    text-align: center;
+    font-size: 50px;    
+    font-family: 'Kalam',sans-serif;
+    color: #1c1916;
+    margin-right: 300px;
+    font-weight: bold;
+
+    
+}
+@media(max-width: 1400px){
+    .welcome{
+        width: 500px;
+        height: auto;
+    }
+    }
+hr{
+    width: 1100;
+    margin-top: 100px;
+}
+
+.information{
+    margin-top:-25px;
+    color: #392613;
+    text-align: center;
+    font-family: 'Kalam',sans-serif;
+    font-size: 25px;
+    margin-right:20%;
+    margin-left:20%;
+}
+
+
+
+
+
+.sectionTwo{
+    margin-top: -60px;
+    font-size: 50px;    
+    font-family: 'Kalam',sans-serif;
+    color: #1c1916;
+    font-weight: bold;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.section-right{
+    margin-top: -60px;
+    font-size: 50px;    
+    font-family: 'Kalam',sans-serif;
+    color: #1c1916;
+    font-weight: bold;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+.text-container{
+    margin-top: 10px
+
+}
+.section{
+max-width: 80%;
+margin: 0 auto;
+}
+
+@media(max-width: 1400px){
+    .section{
+        max-width: 100%;
+    }
+}
+.image2{
+    display: flex;
+    border-style: solid;
+    border-radius: 20%;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 50px 50px 50px;
+    height: 0 auto;
+    width: 0 auto;
+}
+
+.imageRight{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    
+}
+
+.imageLeft{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+}
+
+
+@media(max-width: 1400px){
+    .image3{
+        margin-right:auto;
+    }  
+}
+
+.alignContent1{
+    display: flex;
+    flex-direction: column;
+    margin-right:auto;
+    margin-left: 250px;
+}
+
+.alignContent2{
+    display: flex;
+    flex-direction: column;
+    margin-left:auto;
+    margin-right: 250px;
+}
+
+
+ .imageLeftPElement{
+    margin-top: 0px;
+    text-align:center;
+    margin-left: auto;
+    margin-right:auto;
+    
+    }
+
+
+.imageRight{
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+}
+
+.imageLeft{
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+}
+
+
+.imageLeftPElement{
+    text-align: center;
+    margin-right: 200px;
+    margin-left: 800px;
+}
+@media(max-width: 1700px){
+    .review-section{
+    flex-direction: column;
+
+    }
+    }
+.reviewImage{
+    align-items:right;
+    border-style: double;
+    border-radius: 50%;
+    border-color: black;
+}
+.review-section{
+display: flex;
+align-items: center;
+margin-top: 20px;
+margin-bottom: 20px;
+max-width: 80%;
+margin: 0 auto;
+}
+.review-container{
+    margin-right: 12%;
+    margin-left: 12%; 
+    text-align: center;
+}
+.section-container, .section-container-right{
+    margin: 0 auto;
+    max-width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 20px 20px 20px 20px;
+}
+
+.section-container p{
+    text-align: left;
+}
+.section-container-right p{
+    text-align: right;
+}
+@media(max-width: 1000px){
+    .section-container, .section-container-right{
+        flex-direction: column;
+    }
+}
+@media(max-width:1000px){
+    .section-container{
+    display: flex;
+    }
+}
+.whole-page-footer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.page-footer{
+    background-color: #bfa97c;
+    color: #1c1916;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    max-height: 330px;
+    width: 100%;
+}
+.footer-social-buttons{
+    margin-right: 10%;
+}
+.legal-buttons{
+    margin-left: 10%;
+}
+.terms-button{
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-weight: 800;
+    list-style: none;
+    text-decoration: none;
+    color: #1c1916;
+}
+@media(max-width: 800px){
+    .whole-page-footer{
+        flex-direction: column;
+    }
+    .footer-social-buttons{
+    margin-right: 0%;
+    }
+    .legal-buttons{
+    margin-left: 0%;
+    margin-bottom: 20px;
+}
+}
+
+</style>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<header class="top-menu">
+
+<div class="split" id="hide-me">
+        <nav class="nav-menu-nav">
+        <h1><b>Welcome to St. Kitts!<b></h1>
+            <ul class="nav-menu-buttons">
+                <li><a class="btn" href = "explore.htm"><div class="button-background"><p class="button-text">Explore</p></div></a></li>
+                <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">About</p></div></a></li>
+                <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">Do something</p></div></a></li>
+                <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">Eat beans</p></div></a></li>
+                <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">ChooChoo Startup.mp4</p></div></a></li>
+            </ul>
+        </nav>
+
+        </div>
+    <div class="social-buttons">
+        <p class="social-button-description" id="check-us-out">Check us out!</p>
+        <a href="#" class="fa fa-facebook" onclick="hideButtons()"></a>
+        <a href="#" class="fa fa-twitter" onclick="easterEgg()"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+    </div>
+
+    <a  class = "menu-btn" onclick="openMenu()"><div class="show-menu-button-background"><p class="button-text">Menu</p></div></a>
+</header>
+<body>
+    <div id="mobile-nav-menu">
+        <div class="mobile-menu-container">
+        <nav class="mobile-nav-menu-nav">
+                <ul class="mobile-nav-menu-buttons">
+                    <li><a class="btn" href = "explore.htm"><div class="button-background"><p class="button-text">Explore</p></div></a></li>
+                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">About</p></div></a></li>
+                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">Do something</p></div></a></li>
+                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">Eat beans</p></div></a></li>
+                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">ChooChoo Startup.mp4</p></div></a></li>
+                    <li><a class="btn" onclick="closeMenu()"><div class="close-button-background"><p class="button-text">Close Menu</p></div></a></li>
+                </ul>
+            </nav>
+            </div>
+    </div>
+<div class = "section">    
+    
+    <img class="welcome" src="https://i.imgur.com/NVig5DV.png" alt="Picture" width="1000" height="600">
+    
+    <h2> Easy Taxi Service</h2>
+        <p class="information">Welcome to St.Kitts paragraph thingy here. We provide a texi sevice for tourists and residents in the St.Kitts area. This paragraph has to be longer so we can see how the text looks.</p>
+    <hr>   
+</div>  
+        
+    
+<div class="section-container">
+        
+    <div>  
+                <h3 class="sectionTwo" >Section 2</h3> 
+                <p> Welcome to the taxi service please read for more information this is generic random text so i can format it better im gonna keep writing random stuff until i get a few lines hopefully this is enough</p>      
+            </div>
+            <img class="image2" src="https://i.imgur.com/VKri5QN.png" alt="picture 2" width="300" height="300">
+</div> 
+        
+    
+    <!--this comment works-->
+    <hr>
+
+    <div class="section-container-right">
+        <img class="image2" src="https://i.imgur.com/6Pgd77N.jpg" alt="picture 2" width="300" height="300">
+        <div class="text-container">  
+            <h3 class="section-right">Section 3</h3> 
+            <p> Welcome to the taxi service please read for more information this is generic random text so i can format it better im gonna keep writing random stuff until i get a few lines hopefully this is enough</p>      
+        </div>
+
+</div> 
+
+
+<div class="review-section">
+    <div class="review-container">
+        <img class="reviewImage" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="picture 2" width="200" height="200">
+        <p>This was so good I had to write a good review</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star-o checked"></span>
+        <p>- Herbleton</p>
+</div>
+    <div class="review-container">
+        <img class="reviewImage" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="picture 2" width="200" height="200">
+        <p> These are the best taxis</p>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <p>- Chad</p>
+    </div>
+    
+    <div class="review-container">
+        <img class="reviewImage" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="picture 2" width="200" height="200">
+        <p>Wow I love this service, best taxis</p>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <p>- Karen</p>
+    </div>
+</div>
+   
+</div>
+
+</body>
+
+<footer class="page-footer">
+    <div class="whole-page-footer">
+        <div class="footer-social-buttons">
+            <p class="social-button-description">Check us out!</p>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+
+        <div class="contact-information">
+            <p>Contact us at: <br/> Bruh@bruh.com <br/>1 Bruh Street St. Kitts P/O Box 59</p>
+        </div>
+
+        <div class="legal-buttons">
+            <a href="#" class="terms-button">Terms and Conditions</a>
+        </div>
+    </div>
+</footer>
+<!-- scripts go below here-->
+<script src="hideButtons.js"></script>
+<script src="scripts/menuscript.js"></script>
+<!-- scripts do not go below here-->

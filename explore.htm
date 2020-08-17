@@ -1,0 +1,473 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed');
+    p{
+        color: #392613;
+        text-align: center;
+        font-family: 'Kalam',sans-serif;
+    }
+body{
+    background-color:#add8f9;
+    background-size: 400px 400px;
+    margin: 0;
+}
+
+.top-menu{
+    background-color:#5b84a3;
+    color: #1c1916;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    max-height: 200px;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+@media(max-width: 1100px){
+    .top-menu{
+        flex-direction: column;
+    }
+}
+
+.button-background{
+    width: 120%;
+    height:40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-out;
+}
+.close-button-background{
+    width: 120%;
+    height:40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-out;
+    background-color: red;
+    border-radius: 11px;
+}
+.button-background:hover{
+    transform: scale(1.6);
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.button-background:active{
+    transform: scale(1.5);
+    background-color: #EEEEEE;
+    border-radius: 11px;
+}
+.show-menu-button-background{
+    width: 300px;
+    height:40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-out;
+}
+
+.show-menu-button-background:hover{
+    transform: scale(1.3);
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.show-menu-button-background:active{
+    transform: scale(1.2);
+    background-color: #EEEEEE;
+    border-radius: 11px;
+}
+
+.menu-btn{
+    margin: 0 auto;
+    display: none;
+    text-decoration: none;
+}
+
+@media(max-width: 1100px){
+    .menu-btn{
+        display: flex;
+    }
+}
+
+
+.fa{
+    color: #1c1916;
+    width: 30px;
+    padding: 5px;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .2s ease-out;
+    transform: scale(2);
+}
+
+.fa:hover{
+    transform: scale(2.3);
+}
+.fa:active{
+    transform: scale(2.2);
+    color: #3f3020;
+}
+.social-buttons{
+    color: #1c1916;
+    position: fixed;
+    right: 20px;
+    top: 10px;
+}
+
+.nav-menu-nav{
+    display: flex;
+    margin-top: 20px;
+}
+.nav-menu-buttons{
+    display: flex;
+    margin-left: -20px;
+}
+
+
+
+
+.nav-menu-buttons li{
+    list-style: none;
+    padding-left: 20%;
+}
+.mobile-nav-menu-buttons li{
+    list-style: none;
+    padding-top: 20%;
+}
+@media(max-width: 1500px){
+.nav-menu-buttons li{
+    padding-left: 10%;
+}
+}
+@media(max-width: 1300px){
+.nav-menu-buttons li{
+    padding-left: 5%;
+}
+}
+@media(max-width: 1100px){
+    .nav-menu-buttons, .social-buttons{
+        display: none;
+    }
+}
+
+.nav-menu-buttons li a{
+    text-decoration: none;
+}
+.mobile-nav-menu-buttons li a{
+    text-decoration: none;
+    width: 100%;
+}
+#mobile-nav-menu{ 
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #add8f9;
+    display:none;
+    z-index: 1;
+}
+.mobile-nav-menu-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(2);
+    margin-top: 0;
+}
+.mobile-menu-container{
+    width: 77%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+.button-text{
+    text-align: center;
+    font-family: 'Ubuntu',sans-serif;
+    color: #1c1916;
+}
+
+
+.welcomeImage{
+    display: flex;
+    align-items: center;
+    margin-top: -50px;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.welcome{
+    color:  #000000;
+    text-align: center;
+    font-family: 'Kalam', Arial;
+    margin-top: 120px;
+    font-size: 65;
+}
+
+.introduction{
+    color: #000000;
+    text-align:center;
+    font-family:'Kalam',arial;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left:auto;
+    margin-top: 25px;
+}
+
+hr{  
+    width: 800;
+    margin-top: 15px;
+    color: black;
+    
+}
+
+.attractionHeader{
+    color:  #000000;
+    text-align: center;
+    font-family: 'Kalam', Arial;
+    margin-top: 45px;
+    font-size: 65;
+    margin-bottom: -50px;
+}
+
+.infoSection{
+    font-family:'Kalam', Arial;
+    font-size: 20px;
+    text-align: left;
+    margin-right: 20%;
+    margin-left: 10%;
+    margin-top: 100px;
+}
+
+.info{
+    display:flex;
+    flex-direction:row; 
+}
+
+.infoImage{
+    border-radius: 50%;
+    margin-right: 320px;
+    margin-left: auto;
+    margin-top: 120px;
+}
+
+@media
+    (max-width: 1200px){
+        .infoSection{
+            margin-left:auto;
+            margin-right: auto;
+            text-align:center;
+            font-size: 30px;
+        }
+    }
+
+@media
+    (max-width: 1200px){
+        .infoImage{
+            margin-left:auto;
+            margin-right: auto;
+            align-items:center;
+            margin-top: 30px;
+            margin-bottom: 15px
+        }
+    }
+
+@media
+    (max-width: 1200px){
+        .info{
+            display: flex;
+            flex-direction:column;
+        }
+    }
+
+.whole-page-footer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.page-footer{
+    background-color: #5b84a3;
+    color: #000000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    max-height: 330px;
+    width: 100%;
+}
+.footer-social-buttons{
+    margin-right: 10%;
+}
+.legal-buttons{
+    margin-left: 10%;
+}
+.terms-button{
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-weight: 800;
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+}
+@media(max-width: 800px){
+    .whole-page-footer{
+        flex-direction: column;
+    }
+    .footer-social-buttons{
+    margin-right: 0%;
+    }
+    .legal-buttons{
+    margin-left: 0%;
+    margin-bottom: 20px;
+    }}
+
+.fa{
+    color: #000000;
+    width: 30px;
+    padding: 5px;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .2s ease-out;
+    transform: scale(2);
+}
+
+.fa:hover{
+    transform: scale(2.3);
+}
+.fa:active{
+    transform: scale(2.2);
+    color: #000000;
+}
+.social-buttons{
+    color: #000000;
+    position: fixed;
+    right: 20px;
+    top: 10px;
+}
+
+p{
+color: #000000;
+}
+
+
+</style>
+<body>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<header class="top-menu">
+    <div class="split" id="hide-me">
+        <nav class="nav-menu-nav">
+        <h1><b>Welcome to St. Kitts!<b></h1>
+            <ul class="nav-menu-buttons">
+                <li><a class="btn" href = "mainPage.htm"><div class="button-background"><p class="button-text">Tour</p></div></a></li>
+                <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">About</p></div></a></li>
+                <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">Do something</p></div></a></li>
+                <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">Eat beans</p></div></a></li>
+                <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">ChooChoo Startup.mp4</p></div></a></li>
+            </ul>
+        </nav>
+
+        </div>
+    <div class="social-buttons">
+        <p class="social-button-description" id="check-us-out">Check us out!</p>
+        <a href="#" class="fa fa-facebook" onclick="hideButtons()"></a>
+        <a href="#" class="fa fa-twitter" onclick="easterEgg()"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+    </div>
+
+    <a  class = "menu-btn" onclick="openMenu()"><div class="show-menu-button-background"><p class="button-text">Menu</p></div></a>
+</header>
+
+    <div id="mobile-nav-menu">
+        <div class="mobile-menu-container">
+        <nav class="mobile-nav-menu-nav">
+                <ul class="mobile-nav-menu-buttons">
+                    <li><a class="btn" href = "mainPage.htm"><div class="button-background"><p class="button-text">Tour</p></div></a></li>
+                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">About</p></div></a></li>
+                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">Do something</p></div></a></li>
+                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">Eat beans</p></div></a></li>
+                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">ChooChoo Startup.mp4</p></div></a></li>
+                    <li><a class="btn" onclick="closeMenu()"><div class="close-button-background"><p class="button-text">Close Menu</p></div></a></li>
+                </ul>
+            </nav>
+            </div>
+    </div>
+
+
+
+    <h2 class= "welcome">
+        Come and Explore St.Kitts!
+    </h2>
+
+    <img class="welcomeImage" src="https://i.imgur.com/VKri5QN.png" alt="Picture" width="400" height="400">
+
+    <h3 class="introduction">
+        This is a beautiful island with so much to offer. <br> Come and check out some of the best attractions in the area!
+    </h3>
+
+<hr>
+
+<h2 class="attractionHeader" > Attractions </h2>
+
+<div class="largestInfoSection">
+<div class="info">
+    <h4 class="infoSection"> 
+        St. Kitts is a wonderful island filled with many luxurious beaches which tourists come from all over the world to see. Some notable beaches include: Cockelshell Bay and Frigate Bay. There are also many dining options nearby for those who do not want to go far from the beach to eat. If you are not a big fan of sitting on the beach all day everyday and want something else to do, St. Kitts also offers opportunities to swim with dolphins.
+    </h4>
+    <img class="infoImage" src="https://i.imgur.com/VKri5QN.png" alt="Picture" width="200" height="200">
+</div>
+
+<div class="info">
+    <h4 class="infoSection">
+        On the island, there are many unique places to go and observe wildlife and nature. Tourists can travel to Mount Liamuiga, or take the scenic railway around the island. Tourists may also want to check out the Royal St.Kitts Golf Club or the Brimstone Hill Fortress. St. Kitts is concerned with preserving its natural beauty, and in fact, 25% of the island's entirety is deemed protected area.
+    </h4>
+    <img class="infoImage" src="https://i.imgur.com/VKri5QN.png" alt="Picture" width="200" height="200">
+</div>
+
+
+<div class="info">
+    <h4 class="infoSection">
+        There is also city life in St.Kitts. The capital city, Basseterre, has many shopping centers and resturaunts. St. Kitts uses the Eastern Caribbean Dollar as its main form of currency (about 2.75 USD) but many places take USD or credit as well. Churches and clocks are popular monuments/tourist destinations in the capital city. There are also many hotels for those who would prefer to stay in a more urban setting.
+        
+    </h4>
+    <img class="infoImage" src="https://i.imgur.com/VKri5QN.png" alt="Picture" width="200" height="200">
+</div>
+</div>
+
+
+<footer class="page-footer">
+    <div class="whole-page-footer">
+        <div class="footer-social-buttons">
+            <p class="social-button-description">Check us out!</p>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+
+        <div class="contact-information">
+            <p>Contact us at: <br/> Bruh@bruh.com <br/>1 Bruh Street St. Kitts P/O Box 59</p>
+        </div>
+
+        <div class="legal-buttons">
+            <a href="#" class="terms-button">Terms and Conditions</a>
+        </div>
+    </div>
+</footer>
+<script src="hideButtons.js"></script>
+<script src="scripts/menuscript.js"></script>
+     </body>
