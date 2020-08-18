@@ -256,7 +256,7 @@ hr{
 
 .infoImage{
     border-radius: 50%;
-    margin-right: 320px;
+    margin-right: 220px;
     margin-left: auto;
     margin-top: 120px;
 }
@@ -360,6 +360,62 @@ p{
 color: #000000;
 }
 
+.contact{
+    text-align: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: tan;
+}
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 60%;
+}
+
+input[type=email] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  transition: width 0.4s ease-in-out;
+
+}
+
+input[type=email]:focus {
+  width: 60%;
+}
+
+.contact-header{
+    color:  #000000;
+    text-align: center;
+    font-family: 'Kalam', Arial;
+    margin-top: 0px;
+    font-size: 65;
+    margin-bottom: -50px;
+    padding-bottom: 45px;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: lightblue;
+  font-family: 'Kalam', arial;
+  border: none;
+  color: black;
+  font-size: 15px;
+  padding: 10px 24px;
+  margin: 3px 3px;
+  cursor: pointer;
+  border-radius: 20px;
+
+}
+
 
 </style>
 <body>
@@ -413,7 +469,7 @@ color: #000000;
         Come and Explore St.Kitts!
     </h2>
 
-    <img class="welcomeImage" src="https://i.imgur.com/VKri5QN.png" alt="Picture" width="400" height="400">
+    <img class="welcomeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/1024px-Flag_of_Saint_Kitts_and_Nevis.svg.png" alt="Picture" width="400" height="400">
 
     <h3 class="introduction">
         This is a beautiful island with so much to offer. <br> Come and check out some of the best attractions in the area!
@@ -426,16 +482,17 @@ color: #000000;
 <div class="largestInfoSection">
 <div class="info">
     <h4 class="infoSection"> 
-        St. Kitts is a wonderful island filled with many luxurious beaches which tourists come from all over the world to see. Some notable beaches include: Cockelshell Bay and Frigate Bay. There are also many dining options nearby for those who do not want to go far from the beach to eat. If you are not a big fan of sitting on the beach all day everyday and want something else to do, St. Kitts also offers opportunities to swim with dolphins.
+        St. Kitts is a wonderful island filled with many luxurious beaches which tourists come from all over the world to see. Some notable beaches include: Cockelshell Bay and Frigate Bay. There are also many dining options nearby for those who do not want to go far from the beach to eat. If you are not a big fan of sitting on the beach all day everyday and want something else to do, St. Kitts also offers opportunities to swim with dolphins. (image source: US News)
     </h4>
-    <img class="infoImage" src="https://i.imgur.com/VKri5QN.png" alt="Picture" width="200" height="200">
+    <img class="infoImage" src="https://travel.usnews.com/dims4/USNEWS/436b6da/2147483647/resize/976x652^%3E/crop/976x652/quality/85/?url=https://travel.usnews.com/images/oaulie_bay_flickr_robert_s_donovan_86XPm3r.jpg" alt="Picture" width="200" height="200">
+
 </div>
 
 <div class="info">
     <h4 class="infoSection">
         On the island, there are many unique places to go and observe wildlife and nature. Tourists can travel to Mount Liamuiga, or take the scenic railway around the island. Tourists may also want to check out the Royal St.Kitts Golf Club or the Brimstone Hill Fortress. St. Kitts is concerned with preserving its natural beauty, and in fact, 25% of the island's entirety is deemed protected area.
     </h4>
-    <img class="infoImage" src="https://i.imgur.com/VKri5QN.png" alt="Picture" width="200" height="200">
+    <img class="infoImage" src="https://i.imgur.com/6Pgd77N.jpg" alt="Picture" width="200" height="200">
 </div>
 
 
@@ -447,6 +504,21 @@ color: #000000;
     <img class="infoImage" src="https://i.imgur.com/VKri5QN.png" alt="Picture" width="200" height="200">
 </div>
 </div>
+
+
+<div class="contact">
+    <h2 class="contact-header">Contact Us!</h2>
+    <form class="contact-form">
+        <label for="firstname">First name:</label><br>
+        <input type="text" id="firstname" name="firstname"><br>
+        <label for="lastname">Last name:</label><br>
+        <input type="text" id="lasttname" name="lastname"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <input id="submit" type="button" value="Submit"> 
+    </form>
+</div>
+
 
 
 <footer class="page-footer">
