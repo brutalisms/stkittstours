@@ -153,23 +153,23 @@ html,body
 
 
 .nav-menu-buttons li{
-    list-style: none;
-    padding-left: 20%;
-}
-.mobile-nav-menu-buttons li{
-    list-style: none;
-    padding-top: 20%;
-}
-@media(max-width: 1500px){
-.nav-menu-buttons li{
-    padding-left: 10%;
-}
-}
-@media(max-width: 1300px){
-.nav-menu-buttons li{
-    padding-left: 5%;
-}
-}
+        list-style: none;
+        padding-left: 50%;
+    }
+    .mobile-nav-menu-buttons li{
+        list-style: none;
+        padding-top: 20%;
+    }
+    @media(max-width: 1500px){
+    .nav-menu-buttons li{
+        padding-left: 30%;
+    }
+    }
+    @media(max-width: 1300px){
+    .nav-menu-buttons li{
+        padding-left: 20%;
+    }
+    }
 @media(max-width: 1100px){
     .nav-menu-buttons, .social-buttons{
         display: none;
@@ -486,7 +486,31 @@ margin: 0 auto;
     margin-bottom: 20px;
 }
 }
-
+.remove-decorations{
+    text-decoration: none;
+    color: #1c1916;
+}
+.main-gallery-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.small-button-container{
+    display: flex;
+    flex-direction: column;
+}
+.image-button{
+    margin: 20px 20px 20px 20px;
+    transition: all .2s ease-out;
+    transform: scale(1);
+}
+.image-button:hover{
+    transform: scale(1.1);
+}
+.image-button:active{
+    transform: scale(1.05);
+}
 </style>
 
 
@@ -495,13 +519,10 @@ margin: 0 auto;
 
 <div class="split" id="hide-me">
         <nav class="nav-menu-nav">
-        <h1><b>Welcome to St. Kitts!<b></h1>
+        <h1 onclick="location.href='mainPage.htm'"><b>Welcome to St. Kitts!<b></h1>
             <ul class="nav-menu-buttons">
-                <li><a class="btn" href = "explore.htm"><div class="button-background"><p class="button-text">Explore</p></div></a></li>
                 <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">About</p></div></a></li>
                 <li><a class="btn" href = "book.htm"><div class="button-background"><p class="button-text">Book a Tour</p></div></a></li>
-                <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">Eat beans</p></div></a></li>
-                <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">ChooChoo Startup.mp4</p></div></a></li>
             </ul>
         </nav>
 
@@ -521,20 +542,35 @@ margin: 0 auto;
         <div class="mobile-menu-container">
         <nav class="mobile-nav-menu-nav">
                 <ul class="mobile-nav-menu-buttons">
-                    <li><a class="btn" href = "explore.htm"><div class="button-background"><p class="button-text">Explore</p></div></a></li>
                     <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">About</p></div></a></li>
                     <li><a class="btn" href = "book.htm"><div class="button-background"><p class="button-text">Book a Tour</p></div></a></li>
-                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">Eat beans</p></div></a></li>
-                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">ChooChoo Startup.mp4</p></div></a></li>
                     <li><a class="btn" onclick="closeMenu()"><div class="close-button-background"><p class="button-text">Close Menu</p></div></a></li>
                 </ul>
             </nav>
             </div>
     </div>
 <div class = "section">    
-    
-    <img class="welcome" src="https://i.imgur.com/NVig5DV.png" alt="Picture" width="1000" height="600">
-    
+
+<h2>Welcome to St. Kitts<br>Picture Gallery</br></h2>    
+<div class = "main-gallery-container">
+    <div class = "small-button-container">
+        <a href="#"><img class="image-button" src="https://i.imgur.com/NVig5DV.png" alt="Picture" width="200"></a>
+        <a href="#"><img class="image-button" src="https://i.imgur.com/NVig5DV.png" alt="Picture" width="200"></a>
+        <a href="#"><img class="image-button" src="https://i.imgur.com/NVig5DV.png" alt="Picture" width="200"></a>
+        <a href="#"><img class="image-button" src="https://i.imgur.com/NVig5DV.png" alt="Picture" width="200"></a>
+    </div>
+    <img class="display-image" src="https://i.imgur.com/NVig5DV.png" alt="Picture" width="1010">
+    <div class = "display-image-container">
+    </div>
+</div>
+
+
+
+
+
+
+
+
     <h2> Easy Taxi Service</h2>
         <p class="information">Welcome to St.Kitts! We provide a taxi sevice for tourists and residents in the St.Kitts area.</p>
     <hr>   
@@ -600,6 +636,8 @@ margin: 0 auto;
    
 </div>
 
+
+
 </body>
 
 <footer class="page-footer">
@@ -613,7 +651,7 @@ margin: 0 auto;
         </div>
 
         <div class="contact-information">
-            <p>Contact us at: <br/> Bruh@bruh.com <br/>1 Bruh Street St. Kitts P/O Box 59</p>
+            <a href="explore.htm" class="terms-button">Explore St. Kitts</a>
         </div>
 
         <div class="legal-buttons">

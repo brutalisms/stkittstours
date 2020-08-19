@@ -135,23 +135,23 @@ body{
 
 
 .nav-menu-buttons li{
-    list-style: none;
-    padding-left: 20%;
-}
-.mobile-nav-menu-buttons li{
-    list-style: none;
-    padding-top: 20%;
-}
-@media(max-width: 1500px){
-.nav-menu-buttons li{
-    padding-left: 10%;
-}
-}
-@media(max-width: 1300px){
-.nav-menu-buttons li{
-    padding-left: 5%;
-}
-}
+        list-style: none;
+        padding-left: 50%;
+    }
+    .mobile-nav-menu-buttons li{
+        list-style: none;
+        padding-top: 20%;
+    }
+    @media(max-width: 1500px){
+    .nav-menu-buttons li{
+        padding-left: 30%;
+    }
+    }
+    @media(max-width: 1300px){
+    .nav-menu-buttons li{
+        padding-left: 20%;
+    }
+    }
 @media(max-width: 1100px){
     .nav-menu-buttons, .social-buttons{
         display: none;
@@ -398,7 +398,7 @@ input[type=email]:focus {
     text-align: center;
     font-family: 'Kalam', Arial;
     margin-top: 0px;
-    font-size: 65;
+    font-size: 65px;
     margin-bottom: -50px;
     padding-bottom: 45px;
 }
@@ -415,7 +415,10 @@ input[type=button], input[type=submit], input[type=reset] {
   border-radius: 20px;
 
 }
-
+.remove-decorations{
+    text-decoration: none;
+    color: #1c1916;
+}
 
 </style>
 <body>
@@ -426,13 +429,10 @@ input[type=button], input[type=submit], input[type=reset] {
 <header class="top-menu">
     <div class="split" id="hide-me">
         <nav class="nav-menu-nav">
-        <h1><b>Welcome to St. Kitts!<b></h1>
+            <h1 onclick="location.href='explore.htm'"><b>Welcome to St. Kitts!<b></h1>
             <ul class="nav-menu-buttons">
-                <li><a class="btn" href = "mainPage.htm"><div class="button-background"><p class="button-text">Home Page</p></div></a></li>
                 <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">About</p></div></a></li>
                 <li><a class="btn" href = "book.htm"><div class="button-background"><p class="button-text">Book a Tour</p></div></a></li>
-                <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">Eat beans</p></div></a></li>
-                <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">ChooChoo Startup.mp4</p></div></a></li>
             </ul>
         </nav>
 
@@ -452,11 +452,8 @@ input[type=button], input[type=submit], input[type=reset] {
         <div class="mobile-menu-container">
         <nav class="mobile-nav-menu-nav">
                 <ul class="mobile-nav-menu-buttons">
-                    <li><a class="btn" href = "mainPage.htm"><div class="button-background"><p class="button-text">Tour</p></div></a></li>
                     <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">About</p></div></a></li>
                     <li><a class="btn" href = "book.htm"><div class="button-background"><p class="button-text">Book a Tour</p></div></a></li>
-                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">Eat beans</p></div></a></li>
-                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">ChooChoo Startup.mp4</p></div></a></li>
                     <li><a class="btn" onclick="closeMenu()"><div class="close-button-background"><p class="button-text">Close Menu</p></div></a></li>
                 </ul>
             </nav>
@@ -469,7 +466,7 @@ input[type=button], input[type=submit], input[type=reset] {
         Come and Explore St.Kitts!
     </h2>
 
-    <img class="welcomeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/1024px-Flag_of_Saint_Kitts_and_Nevis.svg.png" alt="Picture" width="400" height="400">
+    <img class="welcomeImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/1024px-Flag_of_Saint_Kitts_and_Nevis.svg.png" alt="Picture" width="200" height="200">
 
     <h3 class="introduction">
         This is a beautiful island with so much to offer. <br> Come and check out some of the best attractions in the area!
@@ -532,7 +529,7 @@ input[type=button], input[type=submit], input[type=reset] {
         </div>
 
         <div class="contact-information">
-            <p>Contact us at: <br/> Bruh@bruh.com <br/>1 Bruh Street St. Kitts P/O Box 59</p>
+            <a href="mainPage.htm" class="terms-button">Get a tour</a>
         </div>
 
         <div class="legal-buttons">
