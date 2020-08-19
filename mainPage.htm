@@ -522,8 +522,16 @@ margin: 0 auto;
     flex-direction: row;
 }  
 #displayImage{
-    max-width: 500px;
+    max-width: 800px;
 }
+}
+@media(max-width: 900px){
+.image-button{
+    max-width: 100px;
+}
+}
+.welcome-to-st-kitts{
+    margin-top: 200px;
 }
 </style>
 
@@ -565,11 +573,11 @@ margin: 0 auto;
     </div>
 <div class = "section">    
 
-<h2>Welcome to St. Kitts<br>Picture Gallery</br></h2>    
+<h2 class = " welcome-to-st-kitts">Welcome to St. Kitts<br>Picture Gallery</br></h2>    
 <div class = "main-gallery-container">
     <div class = "small-button-container">
-        <a onclick="imageFunction('displayImage','https://i.imgur.com/NVig5DV.png')"><img class="image-button" src="https://i.imgur.com/NVig5DV.png" alt="Picture" width="200"></a>
-        <a onclick="imageFunction('displayImage','https://i.imgur.com/kilDeo6.png')"><img class="image-button" src="https://i.imgur.com/kilDeo6.png" alt="Picture" width="200"></a>
+            <a onclick="imageFunction('displayImage','https://i.imgur.com/NVig5DV.png')"><img class="image-button" src="https://i.imgur.com/NVig5DV.png" alt="Picture" width="200"></a>
+            <a onclick="imageFunction('displayImage','https://i.imgur.com/kilDeo6.png')"><img class="image-button" src="https://i.imgur.com/kilDeo6.png" alt="Picture" width="200"></a>
         <a onclick="imageFunction('displayImage','https://i.imgur.com/C68OHzi.png')"><img class="image-button" src="https://i.imgur.com/C68OHzi.png" alt="Picture" width="200"></a>
         <a onclick="imageFunction('displayImage','https://i.imgur.com/kilDeo6.png')"><img class="image-button" src="https://i.imgur.com/kilDeo6.png" alt="Picture" width="200"></a>
     </div>
