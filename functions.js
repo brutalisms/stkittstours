@@ -16,3 +16,7 @@ function easterEgg(){
         document.getElementById('check-us-out').innerHTML = "Website by Aaron Bishop, Jivan Baghsarian, Olivia Chiavegato"
     }
 }
+
+function imageFunction(display,changeInto){
+    document.getElementById(display).src = changeInto;
+}
