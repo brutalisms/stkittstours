@@ -225,6 +225,7 @@ h1{
 
 
 
+
 h2{
     margin: 50px;
     color:#392613;
@@ -599,7 +600,7 @@ input[type=email]:focus {
 
 <div class="split" id="hide-me">
         <nav class="nav-menu-nav">
-        <h1 onclick="location.href='mainPage.htm'"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/1024px-Flag_of_Saint_Kitts_and_Nevis.svg.png" alt="Logo" height="30" width="40"><b> Welcome to St. Kitts!<b></h1>
+        <h1 onclick="location.href='mainPage.htm'"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/1024px-Flag_of_Saint_Kitts_and_Nevis.svg.png" alt="Logo" height="30" width="40"><b> Welcome to St. Kitts!</b></h1>
             <ul class="nav-menu-buttons">
                 <li><a class="btn" href = "about.htm"><div class="button-background"><p class="button-text">About</p></div></a></li>
                 <li><a class="btn" href = "book.htm"><div class="button-background"><p class="button-text">Book a Tour</p></div></a></li>
@@ -722,7 +723,9 @@ input[type=email]:focus {
 
 <div class="contact" id="section-contact">
     <h2 class="contact-header">Contact Us!</h2>
-    <form class="contact-form">
+    
+    <form method="post" class = "contact-form" action="https://api.formcake.com/api/form/66ca94b6-3891-47f3-80a3-85a7524c0ae4/submission">
+
         <label for="firstname">First name:</label><br>
         <input type="text" id="firstname" name="firstname"><br>
         <label for="lastname">Last name:</label><br>
@@ -733,6 +736,7 @@ input[type=email]:focus {
         <input type="text" id="message" name="message"><br>
         <input id="submit" type="button" value="Submit"> 
     </form>
+
 </div>
 
 

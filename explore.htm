@@ -198,6 +198,7 @@ header{
     text-align: center;
     font-family: 'Ubuntu',sans-serif;
     color: #1c1916;
+
 }
 
 
@@ -487,7 +488,16 @@ margin: 0 auto;
     margin-left: 0%;
 
 }
-}
+
+  
+.logo-text{
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 10px;
+        margin-left: 5px;
+        
+    }
+
 
 
 
@@ -503,7 +513,7 @@ margin: 0 auto;
 <header class="top-menu">
     <div class="split" id="hide-me">
         <nav class="nav-menu-nav">
-             <div class=logo-header> <h1 onclick="location.href='explore.htm'"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/1024px-Flag_of_Saint_Kitts_and_Nevis.svg.png" alt="Logo" height="20" width="30"><b>Welcome to St. Kitts<b>
+             <div class=logo-header> <h1 onclick="location.href='explore.htm'"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/1024px-Flag_of_Saint_Kitts_and_Nevis.svg.png" alt="Logo" height="30" width="40"><b class="logo-text">Welcome to St. Kitts</b>
              </h1>
              </div>   
    
@@ -604,7 +614,7 @@ margin: 0 auto;
 
 <div class="contact" id="section-contact">
     <h2 class="contact-header">Contact Us!</h2>
-    <form class="contact-form">
+    <form class="contact-form" method="post" action="https://api.formcake.com/api/form/eb2c3af9-8830-4a88-897a-d24518b507da/submission">
         <label for="firstname">First name:</label><br>
         <input type="text" id="firstname" name="firstname"><br>
         <label for="lastname">Last name:</label><br>
@@ -613,7 +623,7 @@ margin: 0 auto;
         <input type="email" id="email" name="email"><br>
         <label for="message">Message:</label><br>
         <input type="text" id="message" name="message"><br>
-        <input id="submit" type="button" value="Submit"> 
+        <input id="submit" type="submit" value="Submit"> 
     </form>
 </div>
 
