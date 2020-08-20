@@ -12,7 +12,12 @@ body{
     background-size: 400px 400px;
     margin: 0;
 }
-
+html {
+  scroll-behavior: smooth;
+}
+header{
+    z-index: 1;
+}
 .top-menu{
     background-color:#5b84a3;
     color: #1c1916;
@@ -420,6 +425,75 @@ input[type=button], input[type=submit], input[type=reset] {
     color: #1c1916;
 }
 
+.section{
+max-width: 80%;
+margin: 0 auto;
+}
+
+@media(max-width: 1400px){
+    .section{
+        max-width: 100%;
+    }
+}
+
+.welcome-to-st-kitts{
+    margin-top: 200px;
+}
+
+.main-gallery-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.small-button-container{
+    display: flex;
+    flex-direction: column;
+}
+.image-button{
+    margin: 20px 20px 20px 20px;
+    transition: all .2s ease-out;
+    transform: scale(1);
+}
+.image-button:hover{
+    transform: scale(1.1);
+}
+.image-button:active{
+    transform: scale(1.05);
+}
+#displayImage{
+    max-width: 1000px;
+}
+@media(max-width:1200px){
+    .main-gallery-container{
+        flex-direction: column;
+}
+.small-button-container{
+    flex-direction: row;
+}  
+#displayImage{
+    max-width: 800px;
+}
+}
+@media(max-width: 900px){
+.image-button{
+    max-width: 100px;
+}
+}
+
+.logo{
+    width: 30px;
+    height: 20px;
+    margin-left: 0%;
+
+}
+}
+
+
+
+#text-underline:hover{
+        text-decoration: underline;
+    }
 </style>
 <body>
 
@@ -429,19 +503,23 @@ input[type=button], input[type=submit], input[type=reset] {
 <header class="top-menu">
     <div class="split" id="hide-me">
         <nav class="nav-menu-nav">
-            <h1 onclick="location.href='explore.htm'"><b>Welcome to St. Kitts!<b></h1>
+             <div class=logo-header> <h1 onclick="location.href='explore.htm'"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/1024px-Flag_of_Saint_Kitts_and_Nevis.svg.png" alt="Logo" height="20" width="30"><b>Welcome to St. Kitts<b>
+             </h1>
+             </div>   
+   
             <ul class="nav-menu-buttons">
-                <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">About</p></div></a></li>
+                <li><a class="btn" href = "about.htm"><div class="button-background"><p class="button-text">About</p></div></a></li>
                 <li><a class="btn" href = "book.htm"><div class="button-background"><p class="button-text">Book a Tour</p></div></a></li>
+                <li><a class="btn" href = "mainPage.htm"><div class="button-background"><p class="button-text">Tour Site</p></div></a></li>
+                <li><a class="btn" href = "#section-contact"><div class="button-background"><p class="button-text">Contact Us</p></div></a></li>
             </ul>
         </nav>
 
         </div>
     <div class="social-buttons">
         <p class="social-button-description" id="check-us-out">Check us out!</p>
-        <a href="#" class="fa fa-facebook" onclick="hideButtons()"></a>
-        <a href="#" class="fa fa-twitter" onclick="easterEgg()"></a>
-        <a href="#" class="fa fa-youtube"></a>
+        <a href="https://www.facebook.com/St-Kitts-Taxi-and-Tours-105440231280752" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/StKittsTaxi" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-instagram"></a>
     </div>
 
@@ -452,8 +530,10 @@ input[type=button], input[type=submit], input[type=reset] {
         <div class="mobile-menu-container">
         <nav class="mobile-nav-menu-nav">
                 <ul class="mobile-nav-menu-buttons">
-                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">About</p></div></a></li>
+                    <li><a class="btn" href = "about.htm"><div class="button-background"><p class="button-text">About</p></div></a></li>
                     <li><a class="btn" href = "book.htm"><div class="button-background"><p class="button-text">Book a Tour</p></div></a></li>
+                    <li><a class="btn" href = "mainPage.htm"><div class="button-background"><p class="button-text">Tour Site</p></div></a></li>
+                    <li><a class="btn" href = "#section-contact" onclick="closeMenu()"><div class="button-background"><p class="button-text">Contact Us</p></div></a></li>
                     <li><a class="btn" onclick="closeMenu()"><div class="close-button-background"><p class="button-text">Close Menu</p></div></a></li>
                 </ul>
             </nav>
@@ -472,6 +552,25 @@ input[type=button], input[type=submit], input[type=reset] {
         This is a beautiful island with so much to offer. <br> Come and check out some of the best attractions in the area!
     </h3>
 
+    <hr>
+
+    <div class = "section">    
+ 
+        <div class = "main-gallery-container">
+            <div class = "small-button-container">
+                    <a onclick="imageFunction('displayImage','https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2018/04/26/1433/Park-Hyatt-St-Kitts-P199-Exterior-Lagoon-Pool.jpg/Park-Hyatt-St-Kitts-P199-Exterior-Lagoon-Pool.16x9.jpg?imwidth=1280')"><img class="image-button" src="https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2018/04/26/1433/Park-Hyatt-St-Kitts-P199-Exterior-Lagoon-Pool.jpg/Park-Hyatt-St-Kitts-P199-Exterior-Lagoon-Pool.16x9.jpg?imwidth=1280" alt="Picture" width="200"></a>
+                    <a onclick="imageFunction('displayImage','https://www.msccruisesusa.com/-/media/global-contents/destinations/ports/saint-kitts-and-nevis/basseterre/cruise-to-basseterre-saint-kitts-and-nevis.jpg?bc=transparent&as=1&dmc=0&mh=537&mw=806&thn=0&mediamode=desktop&hash=D2FB0A623D9F11A664FD75E469D6D67AADB51FBD')"><img class="image-button" src="https://www.msccruisesusa.com/-/media/global-contents/destinations/ports/saint-kitts-and-nevis/basseterre/cruise-to-basseterre-saint-kitts-and-nevis.jpg?bc=transparent&as=1&dmc=0&mh=537&mw=806&thn=0&mediamode=desktop&hash=D2FB0A623D9F11A664FD75E469D6D67AADB51FBD" alt="Picture" width="200"></a>
+                <a onclick="imageFunction('displayImage','https://wallpapershome.com/images/wallpapers/st-kitts-1280x720-5k-4k-wallpaper-nevis-caribbean-shore-sky-6519.jpg')"><img class="image-button" src="https://wallpapershome.com/images/wallpapers/st-kitts-1280x720-5k-4k-wallpaper-nevis-caribbean-shore-sky-6519.jpg" alt="Picture" width="200"></a>
+                <a onclick="imageFunction('displayImage','https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/76/fb/6a/little-ben.jpg')"><img class="image-button" src="https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/76/fb/6a/little-ben.jpg" alt="Picture" width="200"></a>
+            </div>
+            
+            <div class = "display-image-container">
+                <img id = "displayImage" class="display-image" src="//assets.hyatt.com/content/dam/hyatt/hyattdam/images/2018/04/26/1433/Park-Hyatt-St-Kitts-P199-Exterior-Lagoon-Pool.jpg/Park-Hyatt-St-Kitts-P199-Exterior-Lagoon-Pool.16x9.jpg?imwidth=1280" alt="Picture" width="1000">
+       
+            </div>
+            </div>
+    </div>
+    
 <hr>
 
 <h2 class="attractionHeader" > Attractions </h2>
@@ -479,7 +578,7 @@ input[type=button], input[type=submit], input[type=reset] {
 <div class="largestInfoSection">
 <div class="info">
     <h4 class="infoSection"> 
-        St. Kitts is a wonderful island filled with many luxurious beaches which tourists come from all over the world to see. Some notable beaches include: Cockelshell Bay and Frigate Bay. There are also many dining options nearby for those who do not want to go far from the beach to eat. If you are not a big fan of sitting on the beach all day everyday and want something else to do, St. Kitts also offers opportunities to swim with dolphins. (image source: US News)
+        St. Kitts is a wonderful island filled with many luxurious beaches which tourists come from all over the world to see. Some notable beaches include: Cockelshell Bay and Frigate Bay. There are also many dining options nearby for those who do not want to go far from the beach to eat. If you are not a big fan of sitting on the beach all day everyday and want something else to do, St. Kitts also offers opportunities to swim with dolphins. 
     </h4>
     <img class="infoImage" src="https://travel.usnews.com/dims4/USNEWS/436b6da/2147483647/resize/976x652^%3E/crop/976x652/quality/85/?url=https://travel.usnews.com/images/oaulie_bay_flickr_robert_s_donovan_86XPm3r.jpg" alt="Picture" width="200" height="200">
 
@@ -503,7 +602,7 @@ input[type=button], input[type=submit], input[type=reset] {
 </div>
 
 
-<div class="contact">
+<div class="contact" id="section-contact">
     <h2 class="contact-header">Contact Us!</h2>
     <form class="contact-form">
         <label for="firstname">First name:</label><br>
@@ -512,6 +611,8 @@ input[type=button], input[type=submit], input[type=reset] {
         <input type="text" id="lasttname" name="lastname"><br>
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email"><br>
+        <label for="message">Message:</label><br>
+        <input type="text" id="message" name="message"><br>
         <input id="submit" type="button" value="Submit"> 
     </form>
 </div>
@@ -522,14 +623,13 @@ input[type=button], input[type=submit], input[type=reset] {
     <div class="whole-page-footer">
         <div class="footer-social-buttons">
             <p class="social-button-description">Check us out!</p>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-youtube"></a>
+            <a href="https://www.facebook.com/St-Kitts-Taxi-and-Tours-105440231280752" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/StKittsTaxi" class="fa fa-twitter"></a>
             <a href="#" class="fa fa-instagram"></a>
         </div>
 
         <div class="contact-information">
-            <a href="mainPage.htm" class="terms-button">Get a tour</a>
+            <a href="mainPage.htm" class="terms-button" id="text-underline">Get a tour</a>
         </div>
 
         <div class="legal-buttons">
@@ -539,4 +639,6 @@ input[type=button], input[type=submit], input[type=reset] {
 </footer>
 <script src="functions.js"></script>
 <script src="scripts/menuscript.js"></script>
+<scirpt src="gallery.js"></scirpt>
+
      </body>

@@ -23,6 +23,7 @@ body{
 html{
     max-width: 100vw;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 html,body
 {
@@ -474,6 +475,9 @@ margin: 0 auto;
     text-decoration: none;
     color: #1c1916;
 }
+#text-underline:hover {
+  text-decoration: underline;
+}
 @media(max-width: 800px){
     .whole-page-footer{
         flex-direction: column;
@@ -533,6 +537,60 @@ margin: 0 auto;
 .welcome-to-st-kitts{
     margin-top: 200px;
 }
+.contact{
+    text-align: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: tan;
+}
+
+.contact-header{
+    color:  #000000;
+    text-align: center;
+    font-family: 'Kalam', Arial;
+    margin-top: 0px;
+    font-size: 65px;
+    margin-bottom: -50px;
+    padding-bottom: 45px;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: lightblue;
+  font-family: 'Kalam', arial;
+  border: none;
+  color: black;
+  font-size: 15px;
+  padding: 10px 24px;
+  margin: 3px 3px;
+  cursor: pointer;
+  border-radius: 20px;
+
+}
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 60%;
+}
+
+input[type=email] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  transition: width 0.4s ease-in-out;
+
+}
+
+input[type=email]:focus {
+  width: 60%;
+}
+
 </style>
 
 
@@ -541,31 +599,35 @@ margin: 0 auto;
 
 <div class="split" id="hide-me">
         <nav class="nav-menu-nav">
-        <h1 onclick="location.href='mainPage.htm'"><b>Welcome to St. Kitts!<b></h1>
+        <h1 onclick="location.href='mainPage.htm'"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/1024px-Flag_of_Saint_Kitts_and_Nevis.svg.png" alt="Logo" height="30" width="40"><b> Welcome to St. Kitts!<b></h1>
             <ul class="nav-menu-buttons">
-                <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">About</p></div></a></li>
+                <li><a class="btn" href = "about.htm"><div class="button-background"><p class="button-text">About</p></div></a></li>
                 <li><a class="btn" href = "book.htm"><div class="button-background"><p class="button-text">Book a Tour</p></div></a></li>
+                <li><a class="btn" href = "explore.htm"><div class="button-background"><p class="button-text">Explore</p></div></a></li>
+                <li><a class="btn" href = "#section-contact"><div class="button-background"><p class="button-text">Contact Us</p></div></a></li>
             </ul>
         </nav>
 
         </div>
     <div class="social-buttons">
         <p class="social-button-description" id="check-us-out">Check us out!</p>
-        <a href="#" class="fa fa-facebook" onclick="hideButtons()"></a>
-        <a href="#" class="fa fa-twitter" onclick="easterEgg()"></a>
-        <a href="#" class="fa fa-youtube"></a>
+        <a href="https://www.facebook.com/St-Kitts-Taxi-and-Tours-105440231280752" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/StKittsTaxi" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-instagram"></a>
     </div>
 
     <a  class = "menu-btn" onclick="openMenu()"><div class="show-menu-button-background"><p class="button-text">Menu</p></div></a>
+    
 </header>
 <body>
     <div id="mobile-nav-menu">
         <div class="mobile-menu-container">
         <nav class="mobile-nav-menu-nav">
                 <ul class="mobile-nav-menu-buttons">
-                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">About</p></div></a></li>
+                    <li><a class="btn" href = "about.htm    "><div class="button-background"><p class="button-text">About</p></div></a></li>
                     <li><a class="btn" href = "book.htm"><div class="button-background"><p class="button-text">Book a Tour</p></div></a></li>
+                    <li><a class="btn" href = "explore.htm"><div class="button-background"><p class="button-text">Explore</p></div></a></li>
+                    <li><a class="btn" href = "#section-contact" onclick="closeMenu()"><div class="button-background"><p class="button-text">Contact Us</p></div></a></li>
                     <li><a class="btn" onclick="closeMenu()"><div class="close-button-background"><p class="button-text">Close Menu</p></div></a></li>
                 </ul>
             </nav>
@@ -573,7 +635,7 @@ margin: 0 auto;
     </div>
 <div class = "section">    
 
-<h2 class = " welcome-to-st-kitts">Welcome to St. Kitts<br>Picture Gallery</br></h2>    
+<h2 class = " welcome-to-st-kitts">Take a look at</br>our beautiful island.</h2>    
 <div class = "main-gallery-container">
     <div class = "small-button-container">
             <a onclick="imageFunction('displayImage','https://i.imgur.com/NVig5DV.png')"><img class="image-button" src="https://i.imgur.com/NVig5DV.png" alt="Picture" width="200"></a>
@@ -658,6 +720,22 @@ margin: 0 auto;
    
 </div>
 
+<div class="contact" id="section-contact">
+    <h2 class="contact-header">Contact Us!</h2>
+    <form class="contact-form">
+        <label for="firstname">First name:</label><br>
+        <input type="text" id="firstname" name="firstname"><br>
+        <label for="lastname">Last name:</label><br>
+        <input type="text" id="lasttname" name="lastname"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="message">Message:</label><br>
+        <input type="text" id="message" name="message"><br>
+        <input id="submit" type="button" value="Submit"> 
+    </form>
+</div>
+
+
 
 
 </body>
@@ -666,14 +744,13 @@ margin: 0 auto;
     <div class="whole-page-footer">
         <div class="footer-social-buttons">
             <p class="social-button-description">Check us out!</p>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-youtube"></a>
+            <a href="https://www.facebook.com/St-Kitts-Taxi-and-Tours-105440231280752" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/StKittsTaxi" class="fa fa-twitter"></a>
             <a href="#" class="fa fa-instagram"></a>
         </div>
 
         <div class="contact-information">
-            <a href="explore.htm" class="terms-button">Explore St. Kitts</a>
+            <a href="explore.htm" class="terms-button" id="text-underline">Explore St. Kitts</a>
         </div>
 
         <div class="legal-buttons">

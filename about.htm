@@ -523,10 +523,18 @@
         margin-top: 100px;
         margin-bottom: 100px;
     }
-    .logo{
-        margin-right: 0%;
-        
+    .mike{
+        display: block;
+        margin-top: -50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        border-radius: 20px;
     }
+  #text-underline:hover{
+    text-decoration: underline; 
+
+  }
     </style>
     
     
@@ -535,10 +543,9 @@
     
     <div class="split" id="hide-me">
             <nav class="nav-menu-nav">
-                <h1 onclick="location.href='mainPage.htm'"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/1024px-Flag_of_Saint_Kitts_and_Nevis.svg.png" alt="Logo" height="30" width="40"><b> Welcome to St. Kitts!<b>
-                </h1>
+                <h1 onclick="location.href='mainPage.htm'"><b>Welcome to St. Kitts!<b></h1>
                 <ul class="nav-menu-buttons">
-                    <li><a class="btn" href = "about.htm"><div class="button-background"><p class="button-text">About</p></div></a></li>
+                    <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">About</p></div></a></li>
                     <li><a class="btn" href = "mainPage.htm"><div class="button-background"><p class="button-text">Home Page</p></div></a></li>
                     <li><a class="btn" href = "explore.htm"><div class="button-background"><p class="button-text">Explore</p></div></a></li>
                 </ul>
@@ -559,7 +566,7 @@
             <div class="mobile-menu-container">
             <nav class="mobile-nav-menu-nav">
                     <ul class="mobile-nav-menu-buttons">
-                        <li><a class="btn" href = "about.htm"><div class="button-background"><p class="button-text">About</p></div></a></li>
+                        <li><a class="btn" href = "#"><div class="button-background"><p class="button-text">About</p></div></a></li>
                         <li><a class="btn" href = "mainPage.htm"><div class="button-background"><p class="button-text">Home Page</p></div></a></li>
                         <li><a class="btn" href = "explore.htm"><div class="button-background"><p class="button-text">Explore</p></div></a></li>
                         <li><a class="btn" onclick="closeMenu()"><div class="close-button-background"><p class="button-text">Close Menu</p></div></a></li>
@@ -568,15 +575,14 @@
                 </div>
         </div>
     <div class = "section">    
-        <h2>Here's when we can take you.</h2>
-
-        <div class="center-available-tours-button-because-css-is-never-consistant">
-        <a class = "available-tours-button" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwZbUBRGBRpj3NwH3Q4Yx1AcmOf11Pd5ug0DEkpiV54NDRXhKrJtF6V4pLIYPIo7hpIjJpYE-W7DDQ/pubhtml"><div class="available-tours-button-background"><p class="button-text">Available Tours</p></div></a> 
-    </div>
-        <h2>Let's get you booked.</h2>
-        <div class="center-available-tours-button-because-css-is-never-consistant">
-            <a class = "available-tours-button" href="https://docs.google.com/forms/d/e/1FAIpQLSc3MMa_a16Tlmc29VNvE8YopQaugGxQu90X6Ipd117iDpX-Ug/viewform?usp=pp_url"><div class="available-tours-button-background"><p class="button-text">Book Tour</p></div></a> 
-            </div>
+        <h2>Meet the owner: Micheal.</h2>
+        <figure> 
+        <img class="mike" src="img/mike.jpg" alt="Picture" width="1000">
+        <figcaption><>
+        </figure>
+        <p> 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
     </div>
     <p class="thank-you-message">Thank you!</p>
     </body>
@@ -591,7 +597,7 @@
             </div>
     
             <div class="contact-information">
-                <a href="explore.htm" class="terms-button">Explore St. Kitts</a>
+                <a href="explore.htm" class="terms-button" id="text-underline">Explore St. Kitts</a>
             </div>
     
             <div class="legal-buttons">
